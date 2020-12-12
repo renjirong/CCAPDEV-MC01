@@ -1,0 +1,76 @@
+<html>
+<head>
+    <style>
+        body{
+
+            zoom: 150%;
+        }
+        .login{
+
+            background-color: rgb(71, 126, 71);
+            border: none;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .form{
+            
+            background-color: rgba(0, 0, 0, 0.568);
+            width: 250px;
+            padding: 30px;
+            position: relative;
+            text-align: right;
+            margin: auto;
+            top:25%;
+            bottom:auto;
+            border-radius: 10px;
+        }
+        label{
+            color: rgb(255, 255, 255);
+        }
+
+        body{
+            justify-content: center;
+            background-image: url("login-bg.jpg");
+            background-size:100% 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="login.js">
+    </script>
+    <div class = "outer">
+    </div>
+    <div class="form">
+        <form>
+            <table>
+                <div class="input">
+                    <tr>
+                        <td><label id="lemail">E-mail</label></td>
+                        <td><input name="email" type="text" id="email"> </input></td>
+                    </tr>
+                    <tr>
+                        <td><label id="lpass1">Password</label></td>
+                        <td><input name="password1" type="password" id="pass1"> </input></td>
+                    </tr>
+                </div>
+            </table>
+    
+            
+        </form>
+        <button class = "login" onclick="submit()">
+            Login
+        </button>
+        <button class = "login" onclick="guest()">View</button>
+    </div>
+
+
+</body>
+
+</html>

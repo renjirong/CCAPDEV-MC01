@@ -1,0 +1,48 @@
+	
+
+    .editButton {
+        background-color: skyblue;
+        border: none;
+        color: rgb(255, 255, 255);
+        
+        text-align: right;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 25px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .navbar{
+            position: absolute;
+            top: 50%;
+            background-color: skyblue;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            display: flex;
+            flex:1;
+    }
+
+    header{
+        position:fixed;
+        top: 0px;
+        width:100%;
+        background-color: skyblue;
+        box-shadow: 0 1px 0px rgba(0, 0, 0, .2);
+        height : 60px;
+        
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    body {
+        margin: 0px;
+        font-family: "Helvetica Neue", sans-serif;
+    }
+  
+    div.edit:hover{
+        border-bottom: #000000 1px solid;	
+    }
+
+        

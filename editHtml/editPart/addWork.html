@@ -1,0 +1,304 @@
+<html>
+
+<head>
+    <style>
+        body{
+                justify-content: center;
+                background-image: url("https://firebasestorage.googleapis.com/v0/b/ccapdev-mc01-847ba.appspot.com/o/mainHTMLbg%2FmainBG.png?alt=media&token=efd7cadc-5d6a-4f4b-bff3-1dde04c94b45");
+                background-size:100% 100%;
+    
+            }
+
+            .main{
+                padding-top: 60px;
+                justify-content: space-around;
+                display: flex;
+                align-items: flex-start;
+            
+                
+            }
+
+
+
+            .prevWork{
+                background: linear-gradient(to top, #3333ff 0%, #99ccff 100%);
+                margin: 10px;
+                padding: 10px;
+                background-color: white;
+                border-radius: 20px;
+                text-align: center;
+                color: black;
+                width: 25%;
+            }
+
+            .works>img{
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-right: 10px;
+                border-radius: 20px;
+                width: 100%;
+                height: auto;
+            }
+
+            .works{
+                display: table;
+                margin: 0 auto;
+            }
+
+            .editButton {
+                background-color: skyblue;
+                border: none;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+
+            .navbar{
+                position: absolute;
+                top: 50%;
+                background-color: skyblue;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                display: flex;
+                width: 600px;
+            }
+
+            header{
+                position:fixed;
+                top: 0px;
+                width:100%;
+                background-color: skyblue;
+                box-shadow: 0 1px 0px rgba(0, 0, 0, .2);
+                height : 60px;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+            }
+            
+            body {
+                margin: 0px;
+                font-family: "Helvetica Neue", sans-serif;
+            }
+        
+            div.edit:hover{
+                border-bottom: #000000 1px solid;	
+            }
+            
+    </style>
+
+    <script>
+        function goTo(n){
+
+            switch(n) {
+                case 1:
+                    window.open("addWork.html","_self");
+                    close;
+                    break;
+                case 2:
+                    window.open("addOrganization.html","_self");
+                    close;
+                    break;
+                case 3:
+                    window.open("addEducation.html","_self");
+                    close;
+                    break;
+                case 4:
+                    window.open("editIntro.html","_self");
+                    close;
+                    break;
+                case 5:
+                    window.open("editContact.html","_self");
+                    close;
+                    break;
+                case 6:
+                    window.open("../../login/loginPage.html","_self");
+                    close;
+                    break;
+                case 7:
+                    window.open("../edit.html","_self");
+                    close;
+                    break;
+
+                default:
+            } 
+        }
+    </script>
+    
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <span>
+                <div class="edit work" ><button class= "editButton" onclick="goTo(1)">ADD WORK</button></div>
+            </span>
+            <span>
+                <div class="edit organization"><button class= "editButton" onclick="goTo(2)">ADD ORGANIZATION</button></div>
+            </span>
+            <span>
+                <div class="edit education" ><button class= "editButton" onclick="goTo(3)">ADD EDUCATION</button></div>
+            </span>
+            <span>
+                <div class="edit introduction" ><button class= "editButton" onclick="goTo(4)">EDIT INTRODUCTION</button></div>
+			</span>
+			<span>
+                <div class="edit contact" ><button class= "editButton" onclick="goTo(5)">EDIT CONTACTS</button></div>
+            </span>
+
+            <span>
+                <div class="edit contact" ><button class= "editButton" onclick="goTo(6)">Logout</button></div>
+            </span>
+
+            <span>
+                <div class="edit contact" ><button class= "editButton" onclick="goTo(7)">Back</button></div>
+            </span>
+        </nav>
+
+    </header>
+    
+    
+    
+    <div class = "main">
+        
+
+        <div class = "prevWork" id = "myWork"> 
+            <div class = "inputs">
+                <form id = "formInput">
+                    <h2>ADD WORKS</h2>
+                        <label id="pTitle">Project Name:</label>
+                        <br>
+                        <input type="text" name="name"> </input>
+                    <br>
+                        <label>Image URL:</label>
+                        <br>
+                        <input type="text" name="img"> </input>
+                    
+                    <br>
+                        <label>Description:</label>
+                        <br>
+                        <input type="text" name="desc"> </input>
+                    <br>
+                    <br>
+                    <button class= "submitButton">Submit</button>
+                </form>
+                
+               
+                
+            </div>
+
+
+
+
+            
+
+            
+            
+
+            <h2>My works</h2>            
+            
+        </div>
+
+    </div>
+    
+    
+    
+    
+    
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyAsUgA79Ps1YLIRYOKza21Ay-LRFdJX8ZM",
+        authDomain: "ccapdev-mc01-847ba.firebaseapp.com",
+        projectId: "ccapdev-mc01-847ba",
+        storageBucket: "ccapdev-mc01-847ba.appspot.com",
+        messagingSenderId: "371683972882",
+        appId: "1:371683972882:web:83548525819f6b555e45cb",
+        measurementId: "G-QD5SS88ZEP"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    db.settings({timestampsInSnapshots: true })
+
+    //RENDER WORKS COLUMN
+    const works = document.querySelector('#myWork');
+    const form  = document.querySelector('#formInput');
+    function renderMyWorks(doc){
+        div = document.createElement('div');
+        h4  = document.createElement('h2');
+        img = document.createElement('img');
+        p   = document.createElement('p');
+        button = document.createElement('button');
+        img.setAttribute('src',doc.data().img);
+        h4.textContent = doc.data().name;
+        p.textContent   = doc.data().desc;
+        button.textContent = "DELETE";
+        div.setAttribute("data-id", doc.id); 
+        button.addEventListener('click', (e) => {
+            e.stopPropagation();
+            id = e.target.parentElement.getAttribute('data-id');
+            db.collection('Works').doc(id).delete(); 
+        })
+        div.setAttribute('class', 'works');
+        div.appendChild(h4);
+        div.appendChild(img);
+        div.appendChild(p);
+        div.appendChild(button);
+        works.appendChild(div);
+    }
+
+    db.collection('Works').onSnapshot(snapshot => {
+        docu = snapshot.docChanges();
+        docu.forEach(docs => {
+            if(docs.type == 'added'){
+                renderMyWorks(docs.doc);
+            }
+            else if (docs.type == 'removed'){
+                let div = works.querySelector('[data-id=' + docs.doc.id + ']')
+                works.removeChild(div);
+            }
+        })
+    })
+    //----------------------------
+
+    //send data to server
+    form.addEventListener('submit',(e) => {
+        e.preventDefault();
+        if(form.name.value != '' && form.img.value != '' && form.desc.value != ''){
+            db.collection('Works').add({
+                        name: form.name.value,
+                        img:  form.img.value,
+                        desc: form.desc.value
+                        
+                    });
+                    form.name.value = '';
+                    form.img.value = '';
+                    form.desc.value = '';
+        }
+        
+    })
+    
+    
+    </script>
+    
+        
+
+</body>
+
+</html>
